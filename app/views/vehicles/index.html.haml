@@ -1,0 +1,25 @@
+.container
+  .row
+    .col-sm-6
+      %h2 Vehicles
+  %table.table.table-hover.table-condensed
+    %thead
+      %tr
+        %th Vehicle Type
+        %th Registration Number
+        %th Is Parked
+        %th Action
+    %tbody
+      - if @vehicles.present?
+        - @vehicles.each do |vehicle|
+          %tr
+            %td= vehicle.type
+            %td= vehicle.registration_number
+            %td= vehicle.parked
+            %td= link_to (vehicle.parked? ? 'Unpark' : 'Park'), vehicle_toggle_parking_path(vehicle), method: :put
+  - if @vehicles.present?
+    .col-sm-12.reports-Header
+      #discount-definition-paginator.mb-0
+        = will_paginate @vehicles
+  - else
+    No records found

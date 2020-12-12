@@ -1,2 +1,10 @@
-%nav.navbar.fixed-top.navbar-dark.bg-dark.mb-5
+%nav.navbar.navbar-expand-md.fixed-top.navbar-dark.bg-dark.mb-5
   = link_to 'Parking Lot', root_path, class: 'navbar-brand'
+  %button.navbar-toggler{"aria-controls" => "navbarNavDropdown", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNavDropdown", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarNavDropdown.collapse.navbar-collapse
+    %ul.navbar-nav
+      %li.nav-item
+        = link_to 'Parking Spots', parking_spots_path, class: "nav-item nav-link#{nav_class([parking_spots_path])}"
+      %li.nav-item
+        = link_to 'Vehicles', vehicles_path, class: "nav-item nav-link#{nav_class([vehicles_path])}"

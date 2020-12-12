@@ -13,14 +13,14 @@ module ApplicationHelper
   end
 
   def page_title
-    @page_title || 'Binaryon'
+    @page_title || 'Parking Lot'
   end
 
   def page_description
-    @page_description || 'This is a solution provider startup. Checkout our youtube video downloader.'
+    @page_description || 'This is a solution to solve the parking problems.'
   end
 
   def page_keywords
-    @page_keywords || 'Binaryon, Binaryon Website, youtube, youtube video, youtube video downloader'
+    @page_keywords || 'Parking Lot, Parking Lot Website, Parking Spots'
   end
 end

@@ -1,5 +1,9 @@
 .container
-  %h2 Parking Spots
+  .row
+    .col-sm-6
+      %h2 Parking Spots
+    .col-sm-6
+      = link_to 'New Parking Spot', '#', class: "float-right btn btn-success"
   %table.table.table-hover.table-condensed
     %thead
       %tr
@@ -11,11 +15,11 @@
         - @parking_spots.each do |spot|
           %tr
             %td= spot.name
-            %td= spot.spot_type
+            %td= spot.spot_type.humanize
             %td= spot.occupied
   - if @parking_spots.present?
     .col-sm-12.reports-Header
       #discount-definition-paginator.mb-0
-        = will_paginate @parking_spots, :previous_label => 'Previous', :next_label => 'Next'
+        = will_paginate @parking_spots
   - else
     No records found

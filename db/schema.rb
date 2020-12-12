@@ -25,7 +25,8 @@ ActiveRecord::Schema.define(version: 2020_12_12_164952) do
 
   create_table "vehicles", force: :cascade do |t|
     t.string "registration_number"
-    t.boolean "parked"
+    t.string "type"
+    t.boolean "parked", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
