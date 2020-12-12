@@ -2,6 +2,9 @@ class Vehicle < ApplicationRecord
   has_many :parkings, dependent: :destroy
   has_many :parking_spots, through: :parkings
 
+  # Scopes
+  scope :search, ->(text) { where("lower(registration_number) like '%#{text.downcase}%' OR lower(type) like '%#{text.downcase}%'") }
+
   def toggle_status
     parked ? unpark : park
     toggle!(:parked)

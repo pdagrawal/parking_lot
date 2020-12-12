@@ -4,7 +4,11 @@ class VehiclesController < ApplicationController
   before_action :find_vehicle, only: :toggle_parking
 
   def index
-    @vehicles = Vehicle.order(:id).paginate(page: params[:page])
+    @vehicles = if params[:search].present?
+                  Vehicle.search(params[:search])
+                else
+                  Vehicle
+                end.order(:id).paginate(page: params[:page])
   end
 
   def toggle_parking
