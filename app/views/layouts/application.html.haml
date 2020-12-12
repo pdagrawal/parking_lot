@@ -12,7 +12,7 @@
     %script{:src => "//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"}
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-    = render 'shared/gtag'
   %body
     = render 'layouts/navbar'
-    = yield
+    .content.mt-60
+      = yield

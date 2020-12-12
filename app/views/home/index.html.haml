@@ -1,126 +1,22 @@
-#main-content
-  / home
-  #home
-    / banner
-    .banner_w3lspvt
-      .banner-top1
-        .container
-          .banner-text.text-center
-            %h4 BinaryOn
-            %h3.my-md-4.my-3 To Grow Your Business
-            %p.movetxt.text-bl We Provide Best Services and Products
-    / //banner
-  / //home
-  / about
-  #about.welcome.py-5
-    .container.py-xl-5.py-lg-3
-      .row.py-xl-4
-        .col-lg-6.welcome-left.pr-lg-5
-          %h3 Story About Us
-          %h4.mt-2.mb-3 We are a Startup
-          %h6
-            We can help you build your dream websites and mobile applications
-          %p.mt-4
-            We follow agile to deliver products in an iterative approach and provide experience work on web and mobile to solve the business problem and challenges.
-        .col-lg-6.welcome-right.text-center.mt-lg-0.mt-5
-          .row
-            .col-sm-6
-              .about-sty.ml-sm-3
-                %span.fa.fa-bar-chart.text-wh
-                %p.text-li.mt-2 Business Strategy
-            .col-sm-6.mt-sm-0.mt-4
-              .about-sty-2.px-4.py-5
-                %span.fa.fa-line-chart.text-wh
-                %p.text-li.mt-2 Business Growth
-              .about-sty-2.px-4.py-5.mt-4
-                %span.fa.fa-file-code-o.text-wh
-                %p.text-li.mt-2 Development
-  / //about
-  / services
-  #services.serives-w3pvt-web.py-5
-    .container.py-xl-5.py-lg-3
-      .row.support-bottom.text-center
-        .col-md-4.services-w3ls-grid
-          .serv-icon.mx-auto
-            %span= image_pack_tag 'ruby.png'
-          %h4.text-wh.mt-md-4.mt-3.mb-3 Ruby
-          %p We are Ruby expert
-        .col-md-4.services-w3ls-grid.my-md-0.my-4
-          .serv-icon.clr-2.mx-auto
-            %span= image_pack_tag 'rails.svg', class: 'rails-icon'
-          %h4.text-wh.mt-md-4.mt-3.mb-3 Rails
-          %p We develop Rails applications
-        .col-md-4.services-w3ls-grid
-          .serv-icon.clr-3.mx-auto
-            %span= image_pack_tag 'nodejs.png'
-          %h4.text-wh.mt-md-4.mt-3.mb-3 Node.js
-          %p We build microservices and applications
-  / //services
-  / stats section
-  #stats.stats.py-5
-    .container.py-xl-5.py-lg-3
-      .row.text-center.py-sm-3
-        .col-md-3.col-sm-6.w3layouts_stats_left
-          / %p.counter 600
-          / %p.para-text-w3ls.text-li Awards
-        .col-md-3.col-sm-6.w3layouts_stats_left.mt-sm-0.mt-4
-          %p.counter 12
-          %p.para-text-w3ls.text-li Projects Complete
-        .col-md-3.col-sm-6.w3layouts_stats_left.mt-md-0.mt-4
-          %p.counter 7
-          %p.para-text-w3ls.text-li Happy Clients
-        .col-md-3.col-sm-6.w3layouts_stats_left.mt-md-0.mt-4
-          / %p.counter 500
-          / %p.para-text-w3ls.text-li Mail Conversation
-  / //stats section
-  / testimonials
-  %section#testi.testi.text-center.py-5
-    .container.pb-xl-5.pb-lg-3
-      .title-section.mb-sm-5.mb-4.pb-xl-4.text-center
-        %h4.text-bl.mb-2 We have
-        %h3.w3ls-title.text-bl.text-uppercase.let.font-weight-bold 1230 happy users
-      .row.pb-4
-        .col-lg-6
-          .testi-cgrid
-            .testi-icon
-              %span.fa.fa-user.text-wh{"aria-hidden" => "true"}
-            %h6.b-w3ltxt.mt-4 Chris West
-            %p.mx-auto
-              I have worked with so many developers and companies and You guys are the best developers I got so far.
-        .col-lg-6.mt-lg-0.mt-sm-5.mt-4
-          .testi-cgrid
-            .testi-icon
-              %span.fa.fa-user.text-wh{"aria-hidden" => "true"}
-            %h6.b-w3ltxt.mt-4 Josh Tolly
-            %p.mx-auto
-              I like the way you provide ideas and suggestions at times. That helps me decide what should we do next.
-  / contact
-  %section#contact.contact.py-5
-    .container.py-xl-5.py-lg-3
-      %h3.title.text-uppercase.text-center.text-bl.mb-5.pb-xl-3 Contact Us
-      .row.mail-w3l-w3pvt-web.pt-xl-4
-        .col-md-5.contact-left-w3ls
-          %h3 Contact Info
-          .row.mail-w3.my-4
-            .col-md-2.col-sm-2.col-2.contact-icon-wthree
-              %span.fa.fa-envelope-o{"aria-hidden" => "true"}
-            .col-md-10.col-sm-10.col-10.contact-text-w3pvt-webinf0
-              %h4 Mail us
-              %p
-                %a{:href => "mailto:info@binaryon.com"} info@binaryon.com
-        .col-md-6.w3pvt-webinfo_mail_grid_right.mt-md-0.mt-5
-          = form_with(model: @query, id: 'contact-queries') do |f|
-            .form-group
-              = f.text_field :name, autocomplete: 'name', class: 'form-control', placeholder: 'Name'
-            .form-group
-              = f.email_field :email, autocomplete: 'email', class: 'form-control', placeholder: 'Email'
-            .form-group
-              = f.text_area :message, class: 'form-control', placeholder: 'Message.......'
-            .query-submission-message
-            = f.submit 'Submit', class: 'btn'
-  / //contact
-  / copyright
-  = render 'copyright'
-  / //copyright
-  / move top icon
-  %a.move-top.text-center{:href => "#home"}
+.container
+  %h2 Hover Rows
+  %p The .table-hover class enables a hover state on table rows:
+  %table.table.table-hover
+    %thead
+      %tr
+        %th Firstname
+        %th Lastname
+        %th Email
+    %tbody
+      %tr
+        %td John
+        %td Doe
+        %td john@example.com
+      %tr
+        %td Mary
+        %td Moe
+        %td mary@example.com
+      %tr
+        %td July
+        %td Dooley
+        %td july@example.com

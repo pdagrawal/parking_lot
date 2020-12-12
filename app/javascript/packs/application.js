@@ -10,9 +10,7 @@ require("channels")
 
 import 'bootstrap'
 
-require("asset_js/google_analytics.js")
 require("asset_js/jquery.validate.js")
-require("asset_js/download.js")
 
 // Stylesheets
 import '../stylesheets/application'
