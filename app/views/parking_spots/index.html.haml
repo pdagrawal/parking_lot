@@ -9,14 +9,14 @@
       %tr
         %th Name
         %th Spot Type
-        %th Is Occupied
+        %th Available
     %tbody
       - if @parking_spots.present?
         - @parking_spots.each do |spot|
           %tr
             %td= spot.name
             %td= spot.spot_type.humanize
-            %td= spot.occupied
+            %td= !spot.occupied ? 'Yes' : 'No'
   - if @parking_spots.present?
     .col-sm-12.reports-Header
       #discount-definition-paginator.mb-0

@@ -15,7 +15,7 @@
           %tr
             %td= vehicle.type
             %td= vehicle.registration_number
-            %td= vehicle.parked
+            %td= vehicle.parked ? 'Yes' : 'No'
             %td= link_to (vehicle.parked? ? 'Unpark' : 'Park'), vehicle_toggle_parking_path(vehicle), method: :put
   - if @vehicles.present?
     .col-sm-12.reports-Header

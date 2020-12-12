@@ -2,6 +2,6 @@
 
 class ParkingSpotsController < ApplicationController
   def index
-    @parking_spots = ParkingSpot.all.paginate(page: params[:page])
+    @parking_spots = ParkingSpot.order(:id).paginate(page: params[:page])
   end
 end

@@ -1,10 +1,21 @@
 class Vehicle < ApplicationRecord
+  has_many :parkings, dependent: :destroy
+  has_many :parking_spots, through: :parkings
+
   def toggle_status
     parked ? unpark : park
     toggle!(:parked)
   end
 
-  def method_name
+  def unpark
+    parking = parkings.active.first
+    parking.parking_spot.free!
+    parking.complete!
+  end
 
+  def park
+    spot = ParkingSpot.available.first
+    parkings.create(parking_spot_id: spot.id, start_time: Time.current)
+    spot.occupy!
   end
 end
