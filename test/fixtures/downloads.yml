@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  url: MyString
+  filename: MyString
+  remote_ip: 
+  erased: false
+
+two:
+  url: MyString
+  filename: MyString
+  remote_ip: 
+  erased: false

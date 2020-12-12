@@ -1,0 +1,22 @@
+AllCops:
+  Exclude:
+    - db/**
+    - tmp/**
+Layout/LineLength:
+  Max: 100
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+Style/ExponentialNotation:
+  Enabled: true
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
+Style/Documentation:
+  Enabled: false
