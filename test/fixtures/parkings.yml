@@ -4,8 +4,12 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
+one:
+  parking_spot: one
+  vehicle: one
+  start_time: <%= Time.current %>
 #
-two: {}
-# column: value
+two:
+  parking_spot: two
+  vehicle: two
+  start_time: <%= Time.current %>
